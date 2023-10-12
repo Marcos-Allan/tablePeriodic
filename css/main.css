@@ -48,7 +48,9 @@ header > nav{
 }
 
 header > nav > a{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-decoration: none;
     cursor: pointer;
     color: var(--color5);
@@ -56,7 +58,12 @@ header > nav > a{
     letter-spacing: 1.2px;
 }
 
-main {
+header > nav > a > img{
+    width: 30px;
+    margin-bottom: 6px;
+}
+
+main#history {
     width: 88%;
     padding: 20px;
     border-radius: 12px;
@@ -65,37 +72,92 @@ main {
     color: #000000;
 }
 
-main > h2{
+main#history > h2{
     font-size: 2.3em;
     margin-bottom: 10px;
 }
 
-main > p{
+main#history > p{
     text-align: justify;
     font-size: 1.2em;
     line-height: 1.4em;
 }
 
-main > ul{
+main#history > ul{
     list-style: none;
 }
 
-main > ul > li{
+main#history > ul > li{
     font-size: 2.1em;
     color: var(--color2);
     margin: 12px 0px;
 }
 
-main > ul > p{
+main#history > ul > p{
     text-align: left;
     font-size: 1.2em;
     line-height: 1.4em;
 }
 
-main > ul > p > a{
+main#history > ul > p > a{
     text-decoration: none;
     color: #000000;
     background-color: var(--color2);
     padding: 2px 4px;
     cursor: pointer;
+}
+
+/* TABLE PAGE */
+
+main#table{
+    width: 90vw;
+    height: auto;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+main#table > div{
+    width: 5.55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    font-size: 0.6em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+main#table > div.vaz{
+    border: none;
+}
+section#chosenElement{
+    width: 100%;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section#chosenElement > img{
+    width: 80px;
+    height: auto;
+}
+
+div.elemSymb{
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background-color: orange;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
