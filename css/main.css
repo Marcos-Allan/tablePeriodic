@@ -162,3 +162,29 @@ div.elemSymb{
     align-items: center;
     border: 1px solid #ffffff;
 }
+
+div.divRes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.divRes > p.nameNumber{
+    text-align: center;
+    color: var(--color9);
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin: 8px 0px;
+}
+
+div.divRes > p.nameNumber > span{
+    color: var(--color2);
+}
+
+div.divRes > p.dsitribuitionElectric{
+    text-align: center;
+    font-size: 1.1em;
+    color: var(--color5);
+}
