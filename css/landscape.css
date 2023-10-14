@@ -23,8 +23,14 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 120px;
     overflow-x: hidden;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: var(--color2);
+}
+body::-webkit-scrollbar{
+    width: 6px;
 }
 
 header{
@@ -87,17 +93,32 @@ main#history > p{
 
 main#history > ul{
     list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+main#history > ul > li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 12px 10px;
+    border: 1px solid var(--color2);
+    padding: 6px;
+    border-radius: 8px;
 }
 
 main#history > ul > li > h2{
-    font-size: 2.1em;
     color: var(--color2);
-    margin: 12px 0px;
+    font-size: 1.1em;
+
 }
 
 main#history > ul > li > p{
     text-align: left;
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.4em;
 }
 
@@ -121,14 +142,15 @@ main#table{
 }
 
 main#table > div{
-    width: 100%;
+    width: 50%;
+    padding: 0px 5.55%;
+    height: 40vh;
     display: flex;
     flex-wrap: wrap;
 }
 
 main#table > div > div{
     width: 5.55%;
-    height: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -210,7 +232,7 @@ div.divRes > p.dsitribuitionElectric{
 }
 
 section.tableFamily{
-    margin-top: 30px;
+    margin-top: 140px;
     width: 90%;
     border: 1px solid #ffffff;
     padding: 10px;
