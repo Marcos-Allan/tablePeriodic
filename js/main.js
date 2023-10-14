@@ -2,6 +2,109 @@ let elements = [...document.querySelectorAll('.element')]
 let sElem = []
 let gt = 0.9
 let atual = 0
+let groupsElem = [...document.querySelectorAll('.familyElements')]
+
+groupsElem.map((el, i) => {
+    el.addEventListener('click', () => {
+        
+        groupsElem[0].style.border = '1px solid #ffffff'
+        groupsElem[1].style.border = '1px solid #ffffff'
+        groupsElem[2].style.border = '1px solid #ffffff'
+        groupsElem[3].style.border = '1px solid #ffffff'
+        groupsElem[4].style.border = '1px solid #ffffff'
+        groupsElem[5].style.border = '1px solid #ffffff'
+        groupsElem[6].style.border = '1px solid #ffffff'
+        groupsElem[7].style.border = '1px solid #ffffff'
+        groupsElem[8].style.border = '1px solid #ffffff'
+        groupsElem[9].style.border = '1px solid #ffffff'
+
+        elements.map((el) => el.style.border = '1px solid #000000')
+        switch (i) {
+            case 0:
+                groupsElem[0].style.border = '6px solid #ffffff'
+                let nmetais = [... document.querySelectorAll('.nmetais')]
+                nmetais.map((elem) => {
+                    elem.style.border = '1px solid #ffffff'
+                })
+                break;
+
+            case 1:
+                groupsElem[1].style.border = '6px solid #ffffff'
+                let gnobres = [... document.querySelectorAll('.gnobres')]
+                gnobres.map((elem) => {
+                    elem.style.border = '1px solid #ffffff'
+                })
+            break;
+
+            case 2:
+                groupsElem[2].style.border = '6px solid #ffffff'
+                let malcalinos = [... document.querySelectorAll('.malcalinos')]
+                malcalinos.map((elem) => {
+                    elem.style.border = '1px solid #ffffff'
+                })
+            break;
+
+            case 3:
+                groupsElem[3].style.border = '6px solid #ffffff'
+                let materrosos = [... document.querySelectorAll('.materrosos')]
+                materrosos.map((elem) => {
+                    elem.style.border = '1px solid #ffffff'
+                })
+            break;
+
+            case 4:
+                groupsElem[4].style.border = '6px solid #ffffff'
+                let smetais = [... document.querySelectorAll('.smetais')]
+                smetais.map((elem) => {
+                    elem.style.border = '1px solid #ffffff'
+                })
+            break;
+
+            case 5:
+                groupsElem[5].style.border = '6px solid #ffffff'
+                let halogenios = [... document.querySelectorAll('.halogenios')]
+                halogenios.map((elem) => {
+                    elem.style.border = '1px solid #ffffff'
+                })
+            break;
+
+            case 6:
+                groupsElem[6].style.border = '6px solid #ffffff'
+                let ometais = [... document.querySelectorAll('.ometais')]
+                ometais.map((elem) => {
+                    elem.style.border = '1px solid #ffffff'
+                })
+            break;
+
+            case 7:
+                groupsElem[7].style.border = '6px solid #ffffff'
+                let mtransicao = [... document.querySelectorAll('.mtransicao')]
+                mtransicao.map((elem) => {
+                    elem.style.border = '1px solid #ffffff'
+                })
+            break;
+
+            case 8:
+                groupsElem[8].style.border = '6px solid #ffffff'
+                let lantanideos = [... document.querySelectorAll('.lantanideos')]
+                lantanideos.map((elem) => {
+                    elem.style.border = '1px solid #ffffff'
+                })
+            break;
+
+            case 9:
+                groupsElem[9].style.border = '6px solid #ffffff'
+                let actinideos = [... document.querySelectorAll('.actinideos')]
+                actinideos.map((elem) => {
+                    elem.style.border = '1px solid #ffffff'
+                })
+            break;
+        
+            default:
+                break;
+        }
+    })
+})
 
 // FETCH E ORGANIZAÇÃO DO CONTEUDO NA TABELA
 let tablePeriodic = './js/tp.json'
@@ -771,26 +874,29 @@ function colored(elements){
             case 15:
             case 33:
                 elements[i].style.backgroundColor = 'rgba(162, 211, 68,'+gt+')'
+                elements[i].classList.add('nmetais')
             break;
-            
-            case 1:
-            case 9:
-            case 17:
-            case 35:
-            case 53:
-            case 70:
-            case 87:
-                elements[i].style.backgroundColor = 'rgba(61, 158, 227,'+gt+')'
-            break;
-            
-            case 2:
-            case 10:
-            case 18:
-            case 36:
-            case 54:
-            case 71:
-                elements[i].style.backgroundColor = 'rgba(241, 179, 0,'+gt+')'
-            break;
+                
+                case 1:
+                case 9:
+                case 17:
+                case 35:
+                case 53:
+                case 70:
+                case 87:
+                    elements[i].style.backgroundColor = 'rgba(61, 158, 227,'+gt+')'
+                    elements[i].classList.add('gnobres')
+                break;
+                
+                case 2:
+                case 10:
+                case 18:
+                case 36:
+                case 54:
+                case 71:
+                    elements[i].style.backgroundColor = 'rgba(241, 179, 0,'+gt+')'
+                    elements[i].classList.add('malcalinos')
+                break;
             
             case 3:
             case 11:
@@ -799,6 +905,7 @@ function colored(elements){
             case 55:
             case 72:
                 elements[i].style.backgroundColor = 'rgba(234, 218, 0,'+gt+')'
+                elements[i].classList.add('materrosos')
             break;
             
             case 4:
@@ -809,6 +916,7 @@ function colored(elements){
             case 51:
             case 68:
                 elements[i].style.backgroundColor = 'rgba(76, 182, 172,'+gt+')'
+                elements[i].classList.add('smetais')
             break;
             
             case 8:
@@ -818,6 +926,7 @@ function colored(elements){
             case 69:
             case 86:
                 elements[i].style.backgroundColor = 'rgba(112, 203, 234,'+gt+')'
+                elements[i].classList.add('halogenios')
             break;
             
             case 12:
@@ -832,6 +941,7 @@ function colored(elements){
             case 84:
             case 85:
                 elements[i].style.backgroundColor = 'rgba(162, 198, 210,'+gt+')'
+                elements[i].classList.add('ometais')
             break;
             
             case 20:
@@ -873,6 +983,7 @@ function colored(elements){
             case 80:
             case 81:
                 elements[i].style.backgroundColor = 'rgba(234, 143, 142,'+gt+')'
+                elements[i].classList.add('mtransicao')
             break;
             
             case 88:
@@ -891,6 +1002,7 @@ function colored(elements){
             case 101:
             case 102:
                 elements[i].style.backgroundColor = 'rgba(144, 227, 233,'+gt+')'
+                elements[i].classList.add('lantanideos')
             break;
             
             case 103:
@@ -909,6 +1021,7 @@ function colored(elements){
             case 116:
             case 117:
                 elements[i].style.backgroundColor = 'rgba(220, 173, 215,'+gt+')'
+                elements[i].classList.add('actinideos')
             break;
         }
     })
